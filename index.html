@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Murva Design | Diseño gráfico de verdad</title>
+<meta name="description" content="Logos, redes, branding, edición de videos y webs codeadas. Todo para emprendedores.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800;900&family=Playfair+Display:ital,wght@1,500;1,700&display=swap">
+<style>
+:root{--bg:#050505;--ink:#f4f1ec;--mute:#a9a4b3;--p:#8b3cf0;--pl:#c7a2ff;--paper:#ece8e1;--dark:#111;
+--sans:'Archivo','Arial Black',system-ui,sans-serif;--serif:'Playfair Display',Georgia,serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:500 1.05rem/1.6 var(--sans);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pl);outline-offset:3px}
+.wrap{max-width:1100px;margin:auto;padding:0 22px}
+h1,h2,h3{font-weight:900;line-height:1;text-transform:uppercase;letter-spacing:-.01em}
+em{font-family:var(--serif);font-weight:700;text-transform:none;color:var(--pl);letter-spacing:0}
+/* nav */
+header{position:sticky;top:0;z-index:9;background:rgba(5,5,5,.88);backdrop-filter:blur(8px);border-bottom:1px solid #222}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+nav img{width:44px;height:44px;border-radius:50%;display:block}
+nav ul{display:flex;gap:26px;list-style:none;padding:0;font-weight:800;font-size:.9rem}
+nav ul a{text-decoration:none;padding:6px 2px;border-bottom:3px solid transparent}
+nav ul a:hover{border-color:var(--p)}
+.btn{display:inline-block;background:var(--p);color:#fff;font-weight:900;text-decoration:none;padding:14px 26px;border:0;cursor:pointer;font:900 1rem var(--sans);transform:rotate(-1.5deg);transition:transform .2s,background .2s}
+.btn:hover{transform:rotate(0) scale(1.04);background:#a05af5}
+.btn.alt{background:var(--paper);color:#000}
+/* hero */
+#home{padding:90px 0 110px;position:relative;background:radial-gradient(circle at 85% 20%,#3a127a 0,transparent 45%)}
+.tag{display:inline-block;background:var(--p);color:#fff;font-weight:800;padding:6px 14px;transform:rotate(-2deg);margin-bottom:26px;font-size:.9rem}
+#home h1{font-size:clamp(3rem,10vw,7.6rem);max-width:12ch}
+#home h1 em{display:block;font-size:.78em;margin-top:.12em}
+#home p{max-width:52ch;margin:30px 0 36px;color:var(--mute);font-size:1.15rem}
+.cta{display:flex;gap:18px;flex-wrap:wrap}
+.stamp{position:absolute;right:4%;bottom:70px;width:170px;height:170px;border-radius:50%;background:var(--paper);color:#000;display:grid;place-items:center;text-align:center;font-weight:900;font-size:.95rem;line-height:1.15;padding:20px;transform:rotate(12deg);animation:pop .7s .3s both cubic-bezier(.2,1.6,.4,1)}
+.stamp em{color:var(--p);font-size:1.5rem;display:block}
+@keyframes pop{from{transform:rotate(-40deg) scale(0)}}
+/* torn edges */
+.torn{background:var(--paper);color:#000;padding:70px 0 90px;position:relative;
+clip-path:polygon(0 3%,6% 0,14% 2.5%,23% .5%,33% 3%,44% 0,55% 2.5%,66% .5%,77% 3%,88% 0,100% 2%,100% 97%,92% 100%,80% 97.5%,68% 100%,55% 97%,42% 100%,30% 97.5%,17% 100%,6% 97%,0 99%)}
+.torn h2 em{color:var(--p)}
+h2{font-size:clamp(2.2rem,6vw,4.2rem);margin-bottom:14px}
+.lead{max-width:55ch;color:#3b3744;margin-bottom:44px}
+/* servicios */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:#000;color:var(--ink);padding:28px 24px 26px;position:relative;border-bottom:6px solid var(--p)}
+.card:nth-child(odd){transform:rotate(-.8deg)}.card:nth-child(even){transform:rotate(.8deg)}
+.card h3{font-size:1.35rem;margin-bottom:10px}
+.card p{font-size:.95rem;color:var(--mute)}
+.card.big{background:var(--p);border-color:#000}
+.card.big p{color:#f0e6ff}
+/* sobre mi */
+#sobre{padding:100px 0}
+.about{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:56px;align-items:center}
+.about img{width:100%;border-radius:50%;border:6px solid var(--p);box-shadow:14px 14px 0 var(--pl)}
+.about p{max-width:58ch;margin-top:18px;color:var(--mute)}
+.about p strong{color:var(--ink)}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.facts span{border:2px solid var(--p);padding:6px 14px;font-weight:800;font-size:.9rem}
+/* contacto */
+#contacto{padding-bottom:110px}
+.cwrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+form{display:grid;gap:14px}
+label{font-weight:800;font-size:.9rem}
+input,select,textarea{width:100%;padding:13px 14px;font:500 1rem var(--sans);background:#fff;color:#000;border:3px solid #000;border-radius:0;margin-top:5px}
+select{height:52px;padding-top:0;padding-bottom:0}
+textarea{min-height:120px;resize:vertical}
+#msg{font-weight:800;min-height:1.4em}
+#msg.ok{color:#5b1fc4}
+#msg.err{color:#b3261e}
+.links{display:grid;gap:14px;margin-top:8px}
+.links a{font-weight:900;font-size:1.3rem;text-decoration:none;border-bottom:4px solid var(--p);width:max-content;max-width:100%;overflow-wrap:anywhere}
+footer{padding:34px 0;text-align:center;color:var(--mute);font-size:.9rem}
+footer b{color:var(--ink)}
+@media(max-width:800px){
+nav ul{display:none}
+.about,.cwrap{grid-template-columns:1fr}
+.about img{max-width:240px}
+.stamp{position:static;margin-top:40px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Principal">
+<a href="#home" aria-label="Murva Design, inicio"><img src="imagenes/logo_blanco-08.png" alt="Logo de Murva"></a>
+<ul><li><a href="#home">Home</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#sobre">Sobre mí</a></li><li><a href="#contacto">Contacto</a></li></ul>
+<a class="btn" href="#contacto">Pedí tu presupuesto</a>
+</nav></div></header>
+
+<main>
+<section id="home"><div class="wrap">
+<span class="tag">Murva · Diseño · Movimiento</span>
+<h1>Diseño gráfico <em>de verdad</em></h1>
+<p>Logos, redes, branding, edición de videos y webs codeadas. Todo para emprendedores que quieren que su marca se note y destaque.</p>
+<div class="cta"><a class="btn" href="#contacto">Contame tu proyecto</a><a class="btn alt" href="https://instagram.com/murva.design" target="_blank" rel="noopener">Ver mi Instagram</a></div>
+<div class="stamp"><span>Agenda<em>abierta</em></span></div>
+</div></section>
+
+<section id="servicios" class="torn"><div class="wrap">
+<h2>Lo que hago <em>por tu marca</em></h2>
+<p class="lead">Un solo lugar para que todo lo que muestres se vea igual de profesional, en redes, en papel y en la web.</p>
+<div class="grid">
+<article class="card"><h3>Community management</h3><p>Estrategia, calendario y publicaciones para que tu cuenta crezca con constancia y con criterio.</p></article>
+<article class="card"><h3>Edición de videos</h3><p>Reels, anuncios y contenido con ritmo, efectos y cortes que retienen a quien mira.</p></article>
+<article class="card"><h3>Diseño gráfico para redes</h3><p>Posts, carruseles e historias con una identidad visual reconocible.</p></article>
+<article class="card"><h3>Papelería institucional</h3><p>Tarjetas, folletos, membretes y todo lo que llevan tus clientes en la mano.</p></article>
+<article class="card"><h3>Logos y branding</h3><p>Identidad visual completa: logo, paleta, tipografías y manual de uso.</p></article>
+<article class="card"><h3>Páginas web codeadas</h3><p>Sitios hechos a medida, rápidos y responsive, sin plantillas ni límites.</p></article>
+<article class="card big"><h3>Y mucho más</h3><p>¿Necesitás algo que no está en la lista? Escribime y lo armamos.</p></article>
+</div>
+</div></section>
+
+<section id="sobre"><div class="wrap about">
+<img src="imagenes/logo_blanco-08.png" alt="Logo de Murva Design">
+<div>
+<h2>Hola, soy <em>Murva</em></h2>
+<p><strong>Diseñador gráfico argentino.</strong> Trabajo con emprendedores que ya saben lo que hacen y necesitan que su imagen lo diga por ellos.</p>
+<p>Pienso cada pieza con estrategia: primero qué querés comunicar, después cómo se ve. Menos tipografías, más impacto.</p>
+<div class="facts"><span>Logos</span><span>Redes</span><span>Branding</span><span>Edición de videos</span><span>Web</span></div>
+</div>
+</div></section>
+
+<section id="contacto" class="torn"><div class="wrap cwrap">
+<div>
+<h2>Hablemos <em>de tu marca</em></h2>
+<p class="lead">Contame qué necesitás y te respondo con una propuesta.</p>
+<div class="links">
+<a href="https://instagram.com/murva.design" target="_blank" rel="noopener">@murva.design</a>
+<a href="murva.design@hotmail.com">murva.design@hotmail.com</a>
+</div>
+</div>
+<form id="f">
+<input type="hidden" name="_subject" value="Nuevo mensaje desde la web de Murva">
+<input type="hidden" name="_captcha" value="false">
+<label>Tu nombre<input name="n" required autocomplete="name"></label>
+<label>¿Qué necesitás?<select name="s"><option>Community management</option><option>Edición de videos</option><option>Diseño para redes</option><option>Papelería institucional</option><option>Logo y branding</option><option>Página web</option><option>Otra cosa</option></select></label>
+<label>Contame más<textarea name="m" required></textarea></label>
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<button class="btn" type="submit" id="send">Enviar mensaje</button>
+<p id="msg" role="status" aria-live="polite"></p>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><b>Murva Design</b> · Diseño · Movimiento · © 2026</div></footer>
+
+<script>
+var MAIL='murva.design@hotmail.com'; // <- poné tu mail acá
+document.getElementById('f').addEventListener('submit',function(e){
+e.preventDefault();
+var btn=document.getElementById('send'),msg=document.getElementById('msg'),d=new FormData(this);
+btn.disabled=true;btn.textContent='Enviando...';msg.className='';msg.textContent='';
+fetch('https://formsubmit.co/ajax/'+MAIL,{method:'POST',headers:{'Accept':'application/json'},body:d})
+.then(function(r){return r.json()})
+.then(function(j){
+if(j.success==='true'||j.success===true){msg.className='ok';msg.textContent='Listo, recibí tu mensaje. Te respondo pronto.';e.target.reset();}
+else{throw 0}
+})
+.catch(function(){msg.className='err';msg.textContent='No se pudo enviar. Escribime a '+MAIL+' o por Instagram.';})
+.finally(function(){btn.disabled=false;btn.textContent='Enviar mensaje';});
+});
+</script>
+</body>
+</html>
